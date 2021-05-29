@@ -46,7 +46,7 @@ def find_factors(num = 10):
 	If it is divided then added to the list
 	'''
 	factors_list = []
-	for i in range(num // 2 , 1, -1):
+	for i in range(num // 2 , 0, -1):
 		if (num % i) == 0:
 			factors_list.append(i)
 	factors_tuple = tuple(factors_list)
@@ -311,7 +311,7 @@ def quadrent_of_point(x, y):
 		return (2)
 	elif (x <= 0) and (y <= 0):
 		return (3)
-	elif (x >= 0) and (y >= 0):
+	elif (x >= 0) and (y <= 0):
 		return (4)
 	
 
@@ -343,7 +343,7 @@ def check_vowel_or_consonant(str_s):
 	Else It checks whether it is vowel or string
 	'''
 
-	if not (str.isalpha()):
+	if not (str.isalpha(str_s)):
 		return ("Not a string !")
 	str_s = str_s.lower()
 	if (str_s == 'a') or (str_s == 'e') or (str_s == 'i') or (str_s == 'u'):
